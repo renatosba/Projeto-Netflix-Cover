@@ -1,0 +1,108 @@
+:root{ /*declara variavel na raiz do css, para facilitar*/
+    --vermelho: #e50914;
+    --preta: #141414;
+}
+
+*{ /*padrão para toda a estrutura*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*elementos de base*/
+
+body{/*estilo do corpo da página*/
+    background: var(--preta);
+    font-family: Arial;
+    color: white;
+}
+
+header .container{ /*puxa a classe container, dentro do header*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo{ /*puxa a classe logo dentro de header*/
+    color: var(--vermelho);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+header nav a{ /*puxa a href que está em nav, dentro de header*/
+    text-decoration: none; /*retira o sublinhado do hiperlink*/
+    color: #aaa;
+    margin-right: 10px;
+}
+
+header nav a:hover{ /*sempre que passar o mouse sobre a href, ela altera*/
+    color: #fff;
+}
+
+
+/*filme principal*/
+
+.filme-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('/img/poster.jpg'); /*linear-gradiant trará uma camada com transparência que deve ir de uma cor a outra*/
+    height: 500px;
+    background-size: cover; /*área de cobertura da background será a mesma do tamanho*/
+    display: flex; /*por padrão, o flex joga os itens em linha*/
+    flex-direction: column; /*para mudar, mude a direção*/
+    justify-content: center; /*justifica o conteúdo no centro*/
+    align-items: flex-start; /*alinha os itens sempre começando da esquerda*/
+
+}
+
+.filme-principal .sinopse{
+    margin-top: 10px;
+    margin-bottom: 40px; /*altera a margem inferior da sinopse*/
+}
+
+.filme-principal .titulo{
+    margin-top: 20%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS';
+}
+
+.botao{
+    background-color: rgba(0, 0, 0, .50);/*rgba terá os valores red, green, blue e alpha(transparência)*/
+    border: none;
+    color: white;
+    padding: 15px 30px;/*padding é o espaçamento interno do item. Apenas 1 valor, irá modificar toda a estrutura. 2 Valores irá alterar a estrutura vertical e depois a horizontal*/
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /*altera o cursor para ponteiro ao passar*/
+    transition: .3s ease all ;/*cuida da transição entre animações*/
+}
+
+.botao:hover{/*altera quando passa o mouse sobre o conteúdo*/
+    background-color: white;
+    color: black;
+}
+
+.botao i{
+    margin-right: 10px;
+}
+
+.container{
+    margin-left: 20px;
+}
+
+.filme-principal .container{
+    width: 80%;
+}
+
+.box-serie{
+    height: 100%;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+}
+
+.carrosel-series{
+    margin-top: 5px;
+}
